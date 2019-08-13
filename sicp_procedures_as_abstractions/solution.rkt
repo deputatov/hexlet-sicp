@@ -1,0 +1,5 @@
+(define (sum-of-squares-of-top-two x y z)
+  (define (sum-of-squares n m) (+ (* n n) (* m m)))
+  (cond ((and (< x y) (< x z)) (sum-of-squares y z))
+        ((and (< y x) (< y z)) (sum-of-squares x z))
+        (else (sum-of-squares x y))))
